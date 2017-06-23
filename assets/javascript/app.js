@@ -218,7 +218,8 @@ $(function(){
 			// dateAdded: firebase.database.ServerValue.TIMESTAMP
 		});
 	});
-
+	var myZipCode = 91384;
+	var zipcode2 = 95050;
 	//Google Maps API Call
 	function distanceMatrixCall(myZipCode, zipcode2) {
 		var googleQueryURL = "https://maps.googleapis.com/maps/api/geocode/json?components=postal_code:" + myZipCode + "&key=AIzaSyBh0G9RiMPn-rZTMnKHh5i8aPNGMrVHifE";
@@ -268,7 +269,7 @@ $(function(){
 		});
 	};
 
-	distanceMatrixCall();
+	distanceMatrixCall(myZipCode, zipcode2);
 
 	function zipCodeConverter(zipcode2) {
 		// getFirebaseData();
